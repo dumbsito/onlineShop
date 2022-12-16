@@ -1,0 +1,39 @@
+$rosa: rgb(214, 6, 186);
+
+.filtro{
+    width: 320px;
+    height: 100vh;   
+    border-right: 3px solid $rosa;
+    margin-top: 20px;
+    padding: 30px;
+    font-size: 18px;
+    padding-left: 55px;
+    input{
+        width: 200px;
+        padding: 5px;
+        border: 1px solid $rosa ;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+    .d-flex{
+        border: 1px solid black;
+        width: 200px;
+    }
+    #filtrar{
+        width: 160PX;
+      background-color: $rosa;
+      color: white;
+    font-weight: 500;
+      border: none;
+        padding: 5px;
+    }
+    #all{
+        background-color: rgb(95, 48, 56);
+        color: white;
+        font-weight: 500;
+        border: none;
+        padding: 5px;
+        border: 1px solid black;
+       width: 40px;
+    }
+}

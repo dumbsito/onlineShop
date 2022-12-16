@@ -1,0 +1,53 @@
+nav {
+  display: flex;
+  border-bottom: 1px solid rgb(214, 6, 186);
+}
+nav img {
+  width: 100px;
+  height: 100px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  margin-top: 25px;
+  font-size: 20px;
+}
+ul li {
+  margin-left: 30px;
+}
+
+.cart {
+  margin-left: 620px;
+  margin-top: 30px;
+}
+.cart mat-icon {
+  font-size: 50px !important;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.md-icon-16 {
+  font-size: 16px;
+  height: 16px;
+  width: 16px;
+}
+
+.md-icon-18 {
+  font-size: 18px;
+  height: 18px;
+  width: 18px;
+}
+
+.md-icon-24 {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+}
+
+.md-icon-36 {
+  font-size: 36px;
+  height: 36px;
+  width: 36px;
+}/*# sourceMappingURL=nav.component.css.map */

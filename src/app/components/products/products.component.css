@@ -1,0 +1,59 @@
+.shop {
+  text-align: center;
+  width: 100%;
+}
+.shop h1 {
+  font-size: 45px;
+  margin-top: 30px;
+}
+
+.conte {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-left: 30px;
+  gap: 50px;
+}
+
+.card {
+  border: 1px solid rgb(214, 6, 186);
+  width: 280px;
+  height: 400px;
+}
+.card img {
+  margin: 20px auto;
+  width: 200px;
+  height: 188px;
+}
+.card span {
+  font-size: 22px;
+  font-weight: bold;
+}
+.card p {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.card .boton {
+  border: none;
+  padding: 5px;
+  background-color: rgb(214, 6, 186);
+  color: white;
+  width: 100px;
+  font-size: 16px;
+  margin-left: 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.card:hover {
+  scale: 1.1;
+  transition: all 0.5s;
+}
+
+.boton:hover {
+  scale: 1.1;
+  color: rgb(214, 6, 186) !important;
+  border: 1px solid rgb(214, 6, 186) !important;
+  background-color: white !important;
+  transition: all 0.5s;
+}/*# sourceMappingURL=products.component.css.map */

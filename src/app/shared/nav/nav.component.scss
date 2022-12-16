@@ -1,0 +1,53 @@
+$rosa: rgb(214, 6, 186);
+
+nav{
+    display: flex;
+  border-bottom: 1px solid $rosa;
+    img{
+        width: 100px;
+        height: 100px;
+    }
+}
+ul{
+    list-style: none;
+    display: flex;
+    margin-top: 25px;
+    font-size: 20px;
+
+    li{
+        margin-left: 30px;
+        cursor: pointer;
+    }
+}
+.cart {
+   margin-left: 620px;
+   margin-top: 30px;
+
+
+    mat-icon{
+        font-size: 50px !important;height: 50px;width: 50px;
+        cursor: pointer;
+    }
+
+}
+@mixin md-icon-size($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+  
+  .md-icon-16 {
+    @include md-icon-size(16px);
+  }
+  
+  .md-icon-18 {
+    @include md-icon-size(18px);
+  }
+  
+  .md-icon-24 {
+    @include md-icon-size(24px);
+  }
+  
+  .md-icon-36 {
+    @include md-icon-size(36px);
+  }

@@ -1,0 +1,25 @@
+.filtro {
+  width: 320px;
+  height: 100vh;
+  border-right: 3px solid rgb(214, 6, 186);
+  margin-top: 20px;
+  padding: 30px;
+  font-size: 18px;
+  padding-left: 55px;
+}
+.filtro input {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid rgb(214, 6, 186);
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.filtro button {
+  width: 200PX;
+  background-color: rgb(214, 6, 186);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}/*# sourceMappingURL=filtro.component.css.map */

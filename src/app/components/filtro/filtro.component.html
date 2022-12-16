@@ -1,0 +1,19 @@
+<div>
+    <div class="d-flex filtro flex-column">
+        <h2 (click)="lol()">Filters <span class="material-icons">keyboard_double_arrow_down</span></h2>
+        <label for="">From: $</label>
+        <input [(ngModel)]="desde" type="number" placeholder="123..">
+
+        <label for="">Up: $</label>
+        <input [(ngModel)]="hasta" type="number" placeholder="123..">
+<div class="d-flex mt-2">
+        <button id="filtrar" (click)="filtrar()">Filter</button>
+        <button id="all" (click)="all()">All</button>
+    </div>
+    <div *ngIf="campos" class="mt-2">
+        <h2>los campos no son validos</h2>
+    </div>
+    </div>
+
+    
+</div>
