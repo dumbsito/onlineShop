@@ -1,11 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductsService {
+  search:string=""
+  carrito:any[]=[]
+  mostrarCompra:boolean=false
 
-carrito:any[]=[]
+  
 
   constructor() { }
+
 }

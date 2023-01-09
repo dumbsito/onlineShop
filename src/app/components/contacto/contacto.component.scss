@@ -10,6 +10,7 @@
 input{  
     margin-top: 20px;
         padding: 6px;
+        width: 100%;
 }
 button{
     width: 840px;
@@ -18,4 +19,19 @@ button{
     background-color: green;
     color: white;
     margin-top:20px;
+}
+
+form{
+    width: 40%;
+  margin-top: 100px;
+  margin-left: 20px;
+    border: 1px solid black;
+}
+$rosa: rgb(214, 6, 186);
+h1{
+    color:$rosa;
+    font-weight:500;
+    font-size: 55px;
+text-align: center;
+margin-top: 100px;
 }

@@ -1,15 +1,31 @@
-
+$rosa: rgb(214, 6, 186);
 h1{
-    font-size: 80px;
-    line-height: 70px;
+    font-size: 60px;
+    line-height: 84px;
+    width: 20rem;
+    margin-top: 20px;
+}
+img{
+    width: 100rem;
+    margin-right: 0px;
+    height: 30rem;
+    margin-top: 20px;
 }
 .shop{
-    width: 30px;
-   
-    height: 700px;
-    border: 1px solid blue;
-    width: 360px;
-    
-    margin-left: 60px;
-    margin-top: 30px;
+  padding: 40px;
+  margin-top: -30px;
+}
+p{
+    font-size: 20px;
+    line-height: 25px;
+  
+}
+button{
+
+padding: 10px;
+color: white;
+font-weight: 500;
+margin-top: 10px;
+font-size: 30px;
+background-color: $rosa;
 }

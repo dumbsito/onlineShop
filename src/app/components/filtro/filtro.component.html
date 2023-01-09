@@ -11,9 +11,14 @@
         <button id="all" (click)="all()">All</button>
     </div>
     <div *ngIf="campos" class="mt-2">
-        <h2>los campos no son validos</h2>
+        <h2>the fields aren't valid.</h2>
+    </div>
+    
+    <div class="green" *ngIf="servi.mostrarCompra">
+        <span >Your order placed successfully!
+        </span>
     </div>
     </div>
 
-    
+   
 </div>

@@ -15,29 +15,30 @@
      <img [src]="item.img" >
      <h2>{{item.nombre}}</h2>
      <span>US${{item.precio}}</span>
-     <p>Cantidad <b>{{item.cantidad}}</b></p>
+     <p>Default: <b>{{item.cantidad}}</b></p>
 
      <div>
-        <button class="boton" (click)="add(item.id)" >Comprar</button>
-        <button class="boton" data-bs-toggle="modal" data-bs-target="#staticBackdrop" (click)="detalles(item)">Detalles</button>
+        <button class="boton" (click)="add(item.id)" >Buy</button>
+        <button class="boton" data-bs-toggle="modal" data-bs-target="#staticBackdrop"  (click)="detalles(item)">Details</button>
      </div>
-
+   <!---->
      
     </div>
-    <div *ngFor="let item of products">
+    <div >
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h4 class="modal-title fs-5 text-center" id="staticBackdropLabel">Details</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="borrar()"></button>
             </div>
-            <div class="modal-body">
-              <h1>{{item.nombre}}</h1>
+            <div class="modal-body" *ngFor="let item of items">
+              <img [src]="item.img">
+              <h2 class="fw-bold mt-1">{{item.nombre}}</h2>
+              <p>{{item.description}}</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Understood</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="borrar()">Close</button>
             </div>
           </div>
         </div>

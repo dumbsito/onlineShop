@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<h1 class="text-center">Shopping cart</h1>
+
+<form id="formu" class="mt-5" >
+  <div class="labl">
+  <label>Client :</label>
+  <input #cliente placeholder="Enter client name">
+</div>
+<div>
+  <label>E-mail :</label>
+  <input #email type="email" placeholder="Enter e-mail">
+</div>
+
+</form>
+
+<table class="table table-dark table-striped container mt-4">
+    <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Product</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Sub Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of servi.carrito">
+        <td><img [src]="item.img" alt=""></td>
+        <td class="td">{{item.nombre}}</td>
+        <td class="td">${{item.precio}}</td>
+        <td class="td">{{item.cantidad}}</td>
+        <td class="td">${{item.precio*item.cantidad}}</td>
+        </tr>
+      
+      </tbody>
+  </table>
+
+<div class="botones d-flex">
+  <button class="btn btn-danger me-3" data-bs-toggle="modal" data-bs-target="#staticBackdrop" type="submit" (click)="finish()" >Finish buying</button>
+  <button class="btn btn-secondary" routerLink="/productos">Cancel</button>
+  <div class="total">
+    TOTAL: <span>${{total}}</span>
+  </div>
+</div>
+

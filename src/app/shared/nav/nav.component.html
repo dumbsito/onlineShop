@@ -2,13 +2,13 @@
     <img src="../../../assets/logo-page.webp" >
     <ul>
         <li 
-        ><mat-icon>store</mat-icon>Inicio</li>
+        ><mat-icon>store</mat-icon>Home</li>
     <li 
-    ><mat-icon >rocket_launch</mat-icon>Productos</li>
+    ><mat-icon >rocket_launch</mat-icon>Products</li>
     <li 
-    ><mat-icon>contact_support</mat-icon>Nosotros</li>
-    <li 
-    ><mat-icon> mail_outline</mat-icon>Contacto</li>
+    ><mat-icon>contact_support</mat-icon>About us</li>
+   <li 
+    ><mat-icon> mail_outline</mat-icon>Contact</li>
 </ul>
 <div class="cart">
     <mat-icon  class="carro" data-bs-toggle="modal" data-bs-target="#cartModal" >shopping_cart</mat-icon>
@@ -34,19 +34,23 @@
                 <th scope="col">Product</th>
                 <th scope="col">Price</th>
                 <th scope="col">Qty</th>
-                <th scope="col">Total</th>
+             
                 <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let item of this.servi.carrito">
+              <tr *ngFor="let item of this.servi.carrito; let i=index">
                 <td class="w-25">
                   <img [src]="item.img" class="img-fluid img-thumbnail" alt="Sheep">
                 </td>
-                <td>{{item.nombre}}</td>
+                <td >{{item.nombre}}</td>
                 <td class="fw-bold">US${{item.precio}}</td>
-                <td class="qty"><input type="text"  [(ngModel)]="search" class="form-control" id="input1" value="2"></td>
-                <td></td>
+               <td class="qty">
+                <span (click)="sumar(item)">+</span>
+                <span>{{item.cantidad}}</span>
+                <span (click)="restar(item)">-</span>
+               </td>
+              
                 <td>
                   <a href="#" class="btn btn-danger btn-sm" (click)="delete(item.id)" >
                     <i class="fa fa-times"></i>
@@ -55,13 +59,11 @@
               </tr>
             </tbody>
           </table> 
-          <div class="d-flex justify-content-end">
-            <h5>Total: <span class="price text-success">{{total()}}</span></h5>
-          </div>
+         
         </div>
         <div class="modal-footer border-top-0 d-flex justify-content-between">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-success" (click)="checkout()">Checkout</button>
+          <button type="button" data-bs-dismiss="modal" class="btn btn-success" (click)="checkout()">Checkout</button>
         </div>
       </div>
     </div>

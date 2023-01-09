@@ -10,9 +10,10 @@ import { NavComponent } from './shared/nav/nav.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CartComponent } from './components/cart/cart.component';
 import { FormsModule } from '@angular/forms';
-import { InicioComponent } from './components/inicio/inicio.component';
 import { NosotrosComponent } from './components/nosotros/nosotros.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     FiltroComponent,
     ProductsComponent,
     NavComponent,
-    CartComponent,
     InicioComponent,
+    CartComponent,
     NosotrosComponent,
-    ContactoComponent
+    ContactoComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

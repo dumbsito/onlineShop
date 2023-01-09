@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnInit, Output } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -7,9 +7,9 @@ import { ProductsService } from 'src/app/services/products.service';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent implements OnInit{
+export class NavComponent {
 
-search:string=""
+
   @Input() products:any[]=[]
   @Input()carrito:any[]=[]
   @Output() onDelete=new EventEmitter<any>()
@@ -17,19 +17,9 @@ search:string=""
   constructor(public servi:ProductsService,private route:Router){
  
   }
-  ngOnInit(): void {
- 
-   
-   
-  }
 
-total(){
-  let total=0
-  this.servi.carrito.forEach(e=>{
- total+=e.precio 
-  })
-return total
-}
+ 
+ 
   delete(id:number){
 
   this.servi.carrito= this.servi.carrito.filter((e) => e.id !== id);
@@ -37,16 +27,33 @@ return total
   console.log(this.servi.carrito);
   }
 
-
-  mo(){
+  checkout(){
+    if(this.servi.carrito.length>0){
+      this.route.navigate(['/checkout'])
+    }
+  }
+  me(){
+   
     console.log(this.servi.carrito);
     
-  }
-
-  checkout(){
-    this.route.navigate(['/contacto'])
-  }
-
+      }
   
+      onKey(event:any) {
+        const inputValue = event.target.value;
+        console.log(inputValue);
+        
+      }
+
+      sumar(item:any){
+       item.cantidad++
+      }
+
+      restar(item:any){
+        if(item.cantidad>0){
+          item.cantidad--
+        }
+      
+      }
+
 }
 
