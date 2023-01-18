@@ -1,6 +1,6 @@
 <div>
     <div class="d-flex filtro flex-column">
-        <h2 (click)="lol()">Filters <span class="material-icons">keyboard_double_arrow_down</span></h2>
+        <h2 (click)="lol()" >Filters <span class="material-icons">keyboard_double_arrow_down</span></h2>
         <label for="">From: $</label>
         <input [(ngModel)]="desde" type="number" placeholder="123..">
 
@@ -14,10 +14,12 @@
         <h2>the fields aren't valid.</h2>
     </div>
     
-    <div class="green" *ngIf="servi.mostrarCompra">
+ 
+
+    <div id="viewportPendulum" [hidden]="!servi.mostrarCompra"  class="green">
         <span >Your order placed successfully!
         </span>
-    </div>
+    </div> 
     </div>
 
    

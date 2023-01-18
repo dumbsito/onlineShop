@@ -11,7 +11,5 @@ export class InicioComponent {
   constructor(public servi:ProductsService){
   
   }
-  me(){
-    console.log(this.servi.search);
-      }
+  
 }

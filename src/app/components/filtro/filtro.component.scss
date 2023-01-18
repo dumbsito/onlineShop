@@ -47,7 +47,7 @@ $rosa: rgb(214, 6, 186);
     background-color: #07bc0c;
     margin-top: 50px;
     margin-left:-26px;
-  
+   
     span{
       
         display: block;
@@ -57,3 +57,33 @@ $rosa: rgb(214, 6, 186);
         color: white;
     }
 }
+
+.transition{
+    -webkit-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+    -moz-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+    -ms-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out ;
+    -o-transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+    transition: opacity 1000ms ease-in-out,margin-left 500ms ease-in-out;
+    margin-left: 1500px;
+    width: 200px;
+    opacity: 0;
+  }
+
+
+  #viewportPendulum {
+ 
+    animation: 3s swingViewport;
+  }
+  
+  @keyframes swingViewport {
+    0% {
+      transform: translateX(-300px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+
+    100%{
+        transform: translateX(-300px);
+    }
+  }

@@ -6,7 +6,7 @@ import { Injectable, OnInit } from '@angular/core';
 export class ProductsService {
   search:string=""
   carrito:any[]=[]
-  mostrarCompra:boolean=false
+  mostrarCompra:boolean=false;
 
   
 
